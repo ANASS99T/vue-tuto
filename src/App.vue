@@ -5,8 +5,19 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Lifecycle />
   </div>
 </template>
+
+<script>
+  import Lifecycle from './components/LifeCycle.vue'
+  export default {
+    name: 'app',
+    components: {
+      Lifecycle,
+    }
+  }
+</script>
 
 <style lang="scss">
 #app {
