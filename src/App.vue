@@ -7,15 +7,27 @@
     </div>
     <router-view/>
     <Lifecycle />
+    <p>
+      The date stored in Vuex is :  {{ Year }} / {{ Month }} / {{ Day }}.
+    </p>
   </div>
 </template>
 
 <script>
   import Lifecycle from './components/LifeCycle.vue'
+  import { mapState } from 'vuex'
+
   export default {
     name: 'app',
     components: {
       Lifecycle,
+      },
+    computed: {
+  ...mapState({
+          Year: 'year',
+          Month: 'month',
+          Day: 'day',
+      })
     }
   }
 </script>
