@@ -5,9 +5,7 @@ export default {
 </script>
 
 <template>
-    <div>
         <a href="/">Home</a>
-    </div>
 </template>
 
 <style>

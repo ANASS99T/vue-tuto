@@ -5,22 +5,25 @@
 
     <nav>
       <HomeLink />
-      <a href="/about">About</a>
-      <a href="/content">content</a>
+      <NavLink url='/about' text='About'/>
+      <NavLink url='/contact' text='Contact'/>
     </nav>
     <p>Welcome to our <HomeLink /> page! </p>
+
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import HomeLink from './components/HomeLink.vue'
+import NavLink from './components/NavLink.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
-    HomeLink
+    // HelloWorld,
+    HomeLink,
+    NavLink,
   }
 }
 </script>
