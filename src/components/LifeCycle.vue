@@ -5,9 +5,11 @@
 <script>
     export default {
         name: 'Lifecycle',
-        // data() {
-        //     msg: 'Hello from life cycle !',
-        // },
+        data : function() {
+            return {
+                msg: 'Hello from life cycle !',
+            }
+        },
         beforeCreate () {console.log('I have not been created yet !')},
         created () {console.log('I have just been created')},
         beforeMount() { console.log('I am about to be mounted to the DOM!') },

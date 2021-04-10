@@ -35,7 +35,11 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
+    msg: {
+      type: String,
+      required: true,
+      default: 'This is a default message from props'
+    },
     text: String
   }
 }
