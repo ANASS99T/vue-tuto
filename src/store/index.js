@@ -9,6 +9,11 @@ export default new Vuex.Store({
     day:12,
     year:2021,
   },
+  getters: {
+    formattedDate: state => {
+      return `${state.year} - ${state.month} - ${state.day}`
+    }
+  },
   mutations: {
   },
   actions: {

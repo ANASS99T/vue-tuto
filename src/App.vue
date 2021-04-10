@@ -7,15 +7,16 @@
     </div>
     <router-view/>
     <Lifecycle />
-    <p>
+    <h5>
       The date stored in Vuex is :  {{ Year }} / {{ Month }} / {{ Day }}.
-    </p>
+    </h5>
+    <h5> The date stored from getters in vuex is : {{ formattedDate }}. </h5>
   </div>
 </template>
 
 <script>
   import Lifecycle from './components/LifeCycle.vue'
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
 
   export default {
     name: 'app',
@@ -23,11 +24,12 @@
       Lifecycle,
       },
     computed: {
-  ...mapState({
+      ...mapState({
           Year: 'year',
           Month: 'month',
           Day: 'day',
-      })
+      }),
+      ...mapGetters(['formattedDate'])
     }
   }
 </script>
